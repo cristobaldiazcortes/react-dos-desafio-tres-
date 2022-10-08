@@ -3,7 +3,7 @@ export default function Navbar() {
   const setActiveClass = ({ isActive }) => (isActive ? "active" : "inactive");
   return (
     <div>
-      <NavLink className={setActiveClass} to="/">
+      <NavLink className={setActiveClass} to="/home">
         Home
       </NavLink>
       {" - "}
