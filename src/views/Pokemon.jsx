@@ -1,3 +1,4 @@
+import React from "react";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 
@@ -29,25 +30,28 @@ export default function Personajes() {
   }, []);
 
   return (
-    <div className="mt-5">
+    <div className="pokemon-container">
+     
       <img src={img.front_default}></img>
-
-      <h3>{name}</h3>
-      <ul>
-        {stats.map((stat) => (
-          <li key={stat.stat.url}>
-            <h4>
-              {stat.stat.name}: {stat.base_stat}
-            </h4>
-          </li>
-        ))}
-      </ul>
       
-      {tipos.map((tipo) => (
-              <h3 key={tipo.type.name}>
-                <b>{tipo.type.name}</b>
-              </h3>
-            ))}
+      <div className="stats">
+        <h3>{name}</h3>
+        <ul>
+          {stats.map((stat) => (
+            <li key={stat.stat.url}>
+              <p>
+                {stat.stat.name}: {stat.base_stat}
+              </p>
+            </li>
+          ))}
+        </ul>
+
+        {tipos.map((tipo) => (
+          <p key={tipo.type.name}>
+            <b>{tipo.type.name}</b>
+          </p>
+        ))}
+      </div>
     </div>
   );
 }

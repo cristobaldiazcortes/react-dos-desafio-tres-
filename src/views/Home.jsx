@@ -1,11 +1,11 @@
-import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import React from "react";
 export default function Home() {
  
   
   return (
-    <div className="mt-5">
+    <div className="home">
       <h1>Bienvenido maestro Pokemón</h1>
+      <img className="pikachu" src='https://i.postimg.cc/SxzZCD5c/pikachu.png' alt='pikachu'/>
     
     </div>
   );

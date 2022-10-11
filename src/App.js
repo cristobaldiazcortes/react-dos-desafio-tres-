@@ -1,5 +1,6 @@
-
+import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import 'bootstrap/dist/css/bootstrap.min.css';
 import Navbar from "./components/Navbar";
 import Home from "./views/Home";
 import Pokemones from "./views/Pokemones";
@@ -10,7 +11,7 @@ export default function App() {
       <BrowserRouter>
         <Navbar />
         <Routes>
-          <Route path="/home" element={<Home />} />
+          <Route path="/" element={<Home />} />
           <Route path="/pokemones" element={<Pokemones />} />
           <Route path="/pokemones/:name" element={<Pokemon/>} />
           

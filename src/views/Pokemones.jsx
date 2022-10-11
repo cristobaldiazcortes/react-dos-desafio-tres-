@@ -1,5 +1,7 @@
+import React from "react";
 import { useState, useEffect } from "react";
-import { useParams, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
+import {Button, Form} from 'react-bootstrap';
 export default function Personajes() {
   const [url, setUrl] = useState("");
   const [nombresPokemon, setNombresPokemon] = useState([]);
@@ -27,15 +29,16 @@ export default function Personajes() {
   
 
   return (
-    <div className="mt-5">
+    <div className="container-select">
       <h1>Selecciona un Pokemon</h1>
-      <select name="" onChange={(e) => setUrl(e.target.value)}>
+      <Form.Select name="" onChange={(e) => setUrl(e.target.value)}>
         {nombresPokemon.map((nombrePokemon)=>(
           <option key={nombrePokemon.url} value={nombrePokemon.name}>{nombrePokemon.name}</option>
 
         ))}
-      </select>
-      <button onClick={irAlPokemon}>ver detalle</button>
+      </Form.Select>
+      <br></br>
+      <Button variant="dark" size="lg" onClick={irAlPokemon}>ver detalle</Button>
     </div>
   );
   }
