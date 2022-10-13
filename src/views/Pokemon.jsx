@@ -32,7 +32,7 @@ export default function Personajes() {
   return (
     <div className="pokemon-container">
      
-      <img src={img.front_default}></img>
+      <img src={img.front_default} alt="imagen-pokemon"></img>
       
       <div className="stats">
         <h3>{name}</h3>

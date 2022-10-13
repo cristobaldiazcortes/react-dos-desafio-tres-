@@ -16,7 +16,7 @@ code {
   width: 50%;
 }
 .pikachu {
-  width: 40%;
+  width: 30%;
 }
 
 a {
@@ -59,14 +59,17 @@ a:hover {
 .pokemon-container {
   display: flex;
   justify-content: center;
-  padding-top: 4%;
-  
+  border: solid 1px rgb(12, 11, 11);
+  margin-top: 8%;
+  margin-left: 18%;
+  margin-right: 18%;
+
 }
 
 .stats {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  border: solid 1px black;
+  
 }
 
